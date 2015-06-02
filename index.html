@@ -10,9 +10,34 @@
   </head>
   <body>
     <div class="container">
+      <h2>Welcome to the Iron Bank of Bravos</h2>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-md-offset-4" id="create-account">
+          <form id="new-bank-account" class="form-group">
+            <label for="account-name">Account Name</label>
+            <input type="text" name="account-name" id="account-name" class="form-control">
 
+            <label for="initial-amount">Initial Deposit</label>
+            <input type="text" name="initial-amount" id="initial-amount" class="form-control">
+            <br>
+            <button class="btn btn-success"><span class="glyphicon glyphicon-usd"></span>Create</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8" id="accounts-list">
+          <ul id="bank-accounts"></ul>
+        </div>
+        <div class="col-md-4 col-md-offset-4" id="account-info">
+          <h4>Account Balance: <span id="current"></span></h4>
+          <form id="balance-update" class="form-group">
+            <label for="withdrawl">Withdraw amount</label>
+            <input type="text" name="withdrawl" id="withdrawl" class="form-control">
+            <label for="deposit">Deposit amount</label>
+            <input type="text" name="deposit" id="deposit" class="form-control">
+
+            <button class="btn btn-default">Submit</button>
+          </form>
         </div>
       </div>
     </div>
